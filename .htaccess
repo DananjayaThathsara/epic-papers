@@ -1,0 +1,7 @@
+# Block direct web access to sensitive files at the project root.
+<FilesMatch "^\.env">
+  Require all denied
+</FilesMatch>
+<Files "*.sql">
+  Require all denied
+</Files>

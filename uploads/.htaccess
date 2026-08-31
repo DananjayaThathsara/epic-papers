@@ -1,0 +1,8 @@
+# Uploaded files are user-supplied images. Even though the upload
+# handler only accepts real image content and renames files with a
+# random name + safe extension, this blocks execution of any script
+# file as a second layer of defense.
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|pl|py|cgi|sh|asp|aspx|exe)$">
+  Require all denied
+</FilesMatch>
+php_flag engine off
