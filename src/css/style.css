@@ -257,6 +257,11 @@ button {
   grid-template-columns: 1fr 1fr;
   gap: 48px;
   align-items: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.12)), url("../images/main.jpeg");
+  background-size: cover;
+  background-position: top;
+  border-radius: 8px;
+  height: 70vh;
 }
 .badge {
   display: inline-block;
@@ -1290,14 +1295,95 @@ button {
   body {
     padding-bottom: 80px;
   } /* keeps the floating button clear of footer content */
+  .hero {
+    padding: 18px 0 22px;
+  }
   .hero-grid {
     grid-template-columns: 1fr;
+    gap: 10px;
+    min-height: 0;
+    height: auto;
+    padding: 16px 14px 18px;
+    border-radius: 10px;
+    margin: 10px;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.52), rgb(255 255 255 / 82%)),
+      url(../images/main.jpeg) center / cover no-repeat;
+    overflow: visible;
+    border:var(--green-pale) 1px solid;
+  }
+  .hero-copy {
+    max-width: 100%;
+  }
+  .badge {
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    font-size: 0.52rem;
+    letter-spacing: 0.08em;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(46, 139, 71, 0.12);
   }
   .hero h1 {
-    font-size: 2rem;
+    font-size: clamp(1.6rem, 8vw, 2.5rem);
+    line-height: 1.25;
+    letter-spacing: -0.05em;
+    max-width: 8.2ch;
+    margin-bottom: 10px;
+  }
+  .hero-desc {
+    font-size: 0.82rem;
+    line-height: 1.5;
+    max-width: 72%;
+    margin-bottom: 0;
+    color: rgba(23, 34, 26, 0.8);
   }
   .hero-features {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px 6px;
+    margin-top: 14px;
+    max-width: 100%;
+  }
+  .hero-feature {
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    backdrop-filter: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .hero-feature strong {
+    font-size: 0.62rem;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+  .hero-feature span {
+    font-size: 0.6rem;
+    color: rgba(23, 34, 26, 0.72);
+    white-space: nowrap;
+  }
+  .hero-feature .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+    color: var(--green);
+    margin-bottom: 0;
+  }
+  .hero-feature .icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .section {
+    padding: 15px 0 40px 0;
+  }
+  .section-head {
+    margin-bottom: 22px;
   }
   .product-grid {
     grid-template-columns: 1fr;

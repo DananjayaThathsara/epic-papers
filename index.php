@@ -120,36 +120,7 @@ $loggedIn = is_logged_in();
         </div>
       </div>
 
-      <div class="hero-art">
-        <div class="hero-art-bg">
-          <svg class="hero-slip" viewBox="0 0 170 105" xmlns="http://www.w3.org/2000/svg">
-            <rect x="2" y="2" width="166" height="101" rx="6" fill="#fff" stroke="#dfe8e1" />
-            <rect x="2" y="2" width="166" height="26" rx="6" fill="#2e8b47" />
-            <rect x="2" y="14" width="166" height="14" fill="#2e8b47" />
-            <text x="15" y="19" font-family="Poppins" font-size="12" fill="#fff" font-weight="700">EPIC PAPER</text>
-            <text x="15" y="46" font-family="Inter" font-size="8" fill="#9aa89f">Name :</text>
-            <line x1="45" y1="46" x2="150" y2="46" stroke="#e3ebe4" />
-            <text x="15" y="62" font-family="Inter" font-size="8" fill="#9aa89f">Date :</text>
-            <line x1="45" y1="62" x2="150" y2="62" stroke="#e3ebe4" />
-            <text x="15" y="78" font-family="Inter" font-size="8" fill="#9aa89f">Time :</text>
-            <line x1="45" y1="78" x2="150" y2="78" stroke="#e3ebe4" />
-          </svg>
 
-          <svg class="medicine-bag" viewBox="0 0 220 280" xmlns="http://www.w3.org/2000/svg">
-            <path d="M28 78 L16 265 Q15 274 25 274 L195 274 Q205 274 204 265 L192 78 Z" fill="#ffffff" stroke="#2e8b47" stroke-width="2" />
-            <path d="M66 78 L72 34 Q73 16 96 16 L124 16 Q147 16 148 34 L154 78" fill="none" stroke="#2e8b47" stroke-width="8" stroke-linecap="round" />
-            <rect x="16" y="72" width="188" height="14" fill="#2e8b47" />
-            <text x="110" y="140" font-family="Poppins" font-size="24" font-weight="700" fill="#155724" text-anchor="middle">EPIC</text>
-            <text x="110" y="162" font-family="Poppins" font-size="13" font-weight="600" fill="#2e8b47" text-anchor="middle" letter-spacing="3">PAPER</text>
-            <g transform="translate(110,188)">
-              <circle r="15" fill="#2e8b47" />
-              <path d="M-6 0h12M0-6v12" stroke="#fff" stroke-width="3.5" stroke-linecap="round" />
-            </g>
-            <rect x="40" y="214" width="140" height="28" rx="4" fill="#2e8b47" />
-            <text x="110" y="233" font-family="Inter" font-size="12" font-weight="600" fill="#fff" text-anchor="middle" letter-spacing="1">MEDICINE</text>
-          </svg>
-        </div>
-      </div>
     </div>
   </section>
 
