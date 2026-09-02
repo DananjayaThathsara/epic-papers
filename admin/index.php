@@ -15,6 +15,7 @@ $adminUsername = current_admin_username();
   <title>Epic Paper Admin</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="icon" href="../src/images/favicon.png" type="image/svg+xml">
   <link rel="stylesheet" href="../src/css/style.css">
 </head>
 
@@ -23,11 +24,7 @@ $adminUsername = current_admin_username();
   <header class="site-header">
     <nav class="nav">
       <a href="../index.php" class="logo">
-        <svg class="logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 3 L44 14 V34 L24 45 L4 34 V14 Z" fill="#2e8b47" />
-          <path d="M24 3 L44 14 L24 24 L4 14 Z" fill="#37995a" />
-          <path d="M24 24 V45 L44 34 V14 Z" fill="#155724" />
-        </svg>
+        <img src="../src/images/logo.png" alt="" width="60" height="60">
         <span class="logo-text"><strong>EPIC PAPER</strong><span>PACKAGING SOLUTIONS</span></span>
       </a>
       <div class="nav-cta admin-nav-cta">
