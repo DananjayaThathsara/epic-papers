@@ -54,9 +54,9 @@ if ("IntersectionObserver" in window) {
   );
   observeRevealItems();
 } else {
-  document.querySelectorAll(
-    ".section-head, .why-item, .stat-row, .process-step, .product-card, .dist-info, #map, .site-footer > .container",
-  ).forEach((item) => item.classList.add("is-visible"));
+  document
+    .querySelectorAll(".section-head, .why-item, .stat-row, .process-step, .product-card, .dist-info, #map, .site-footer > .container")
+    .forEach((item) => item.classList.add("is-visible"));
 }
 
 /* ---------- Mobile nav toggle ---------- */
