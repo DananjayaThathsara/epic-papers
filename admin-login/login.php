@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$lockedOut) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Login Epic Paper</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../src/css/style.css">
+  <link rel="stylesheet" href="../src/css/style.css?v=3">
 </head>
 
 <body>

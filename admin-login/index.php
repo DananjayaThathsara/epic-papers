@@ -16,7 +16,7 @@ $adminUsername = current_admin_username();
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="icon" href="../src/images/favicon.png" type="image/svg+xml">
-  <link rel="stylesheet" href="../src/css/style.css">
+  <link rel="stylesheet" href="../src/css/style.css?v=3">
 </head>
 
 <body>

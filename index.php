@@ -24,7 +24,7 @@ $loggedIn = is_logged_in();
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
-  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/style.css?v=3">
 </head>
 
 <body>
@@ -403,7 +403,7 @@ $loggedIn = is_logged_in();
     SITE_CONFIG.WHATSAPP_NUMBER = "<?= h($settings['whatsapp_number']) ?>";
   </script>
   <script src="src/js/icons.js"></script>
-  <script src="src/js/main.js?v=2"></script>
+  <script src="src/js/main.js?v=3"></script>
   <script src="src/js/map.js"></script>
 </body>
 
