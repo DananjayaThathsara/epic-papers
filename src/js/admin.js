@@ -392,8 +392,8 @@ pointForm.addEventListener("submit", async (e) => {
     lng: parseFloat(lngInput.value),
   };
 
-  if (!body.name || isNaN(body.lat) || isNaN(body.lng)) {
-    showStatus("Please fill in name, latitude and longitude.", false);
+  if (isNaN(body.lat) || isNaN(body.lng)) {
+    showStatus("Please fill in latitude and longitude.", false);
     return;
   }
 
@@ -408,7 +408,8 @@ pointForm.addEventListener("submit", async (e) => {
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || "Save failed");
 
-    showStatus(`"${body.name}" ${isEdit ? "updated" : "added to the map"}.`, true);
+    const pointLabel = body.name || "Distributor point";
+    showStatus(`"${pointLabel}" ${isEdit ? "updated" : "added to the map"}.`, true);
     resetPointForm();
     loadAllPoints();
   } catch (err) {

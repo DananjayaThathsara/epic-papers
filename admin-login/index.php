@@ -261,7 +261,7 @@ $adminUsername = current_admin_username();
   </script>
   <script src="../src/js/config.js"></script>
   <script src="../src/js/icons.js"></script>
-  <script src="../src/js/admin.js"></script>
+  <script src="../src/js/admin.js?v=2"></script>
 </body>
 
 </html>

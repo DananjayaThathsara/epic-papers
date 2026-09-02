@@ -866,8 +866,12 @@ button {
 }
 
 @keyframes promise-panel-float {
-  from { transform: translateX(0) scale(1); }
-  to { transform: translateX(10px) scale(1.01); }
+  from {
+    transform: translateX(0) scale(1);
+  }
+  to {
+    transform: translateX(10px) scale(1.01);
+  }
 }
 /* ===== Products ===== */
 .product-grid {
