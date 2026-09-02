@@ -505,7 +505,7 @@ $loggedIn = is_logged_in();
   <script>
     SITE_CONFIG.WHATSAPP_NUMBER = "<?= h($settings['whatsapp_number']) ?>";
   </script>
-  <script src="src/js/icons.js"></script>
+  <script src="src/js/icons.js?v=2"></script>
   <script src="src/js/main.js?v=7"></script>
   <script src="src/js/map.js"></script>
 </body>
