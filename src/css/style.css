@@ -567,7 +567,8 @@ button {
 .about-section .about-promise.reveal-item.is-visible {
   animation:
     promise-dots-drift 18s linear infinite,
-    about-promise-load 1600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    about-promise-load 1600ms cubic-bezier(0.16, 1, 0.3, 1) both,
+    promise-panel-float 4s ease-in-out 1600ms infinite alternate;
 }
 .about-section .about-promise.reveal-item.is-visible > * {
   animation: promise-content-load 800ms cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -864,6 +865,10 @@ button {
   line-height: 1.6;
 }
 
+@keyframes promise-panel-float {
+  from { transform: translateX(0) scale(1); }
+  to { transform: translateX(10px) scale(1.01); }
+}
 /* ===== Products ===== */
 .product-grid {
   display: grid;
