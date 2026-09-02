@@ -278,11 +278,7 @@ $loggedIn = is_logged_in();
     <div class="container footer-grid">
       <div>
         <div class="footer-logo">
-          <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 3 L44 14 V34 L24 45 L4 34 V14 Z" fill="#2e8b47" />
-            <path d="M24 3 L44 14 L24 24 L4 14 Z" fill="#4caf6e" />
-            <path d="M24 24 V45 L44 34 V14 Z" fill="#155724" />
-          </svg>
+          <img src="src/images/logo.png" alt="" width="60" height="60">
           <span class="logo-text"><strong>EPIC PAPER</strong><span>PACKAGING SOLUTIONS</span></span>
         </div>
         <p>Sri Lanka's trusted partner for pharmaceutical paper packaging solutions.</p>
