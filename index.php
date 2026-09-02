@@ -111,7 +111,7 @@ $loggedIn = is_logged_in();
                 <circle cx="18" cy="8" r="2.4" />
                 <path d="M16.5 14.2c2.6.4 4.5 2.4 4.5 5.8" />
               </svg></span>
-            <strong>23+ Years</strong><span>Experience</span>
+            <strong class="years-feature"><span class="years-count" data-target="23">0</span>+ Years</strong><span>Experience</span>
           </div>
         </div>
       </div>
@@ -403,7 +403,7 @@ $loggedIn = is_logged_in();
     SITE_CONFIG.WHATSAPP_NUMBER = "<?= h($settings['whatsapp_number']) ?>";
   </script>
   <script src="src/js/icons.js"></script>
-  <script src="src/js/main.js"></script>
+  <script src="src/js/main.js?v=2"></script>
   <script src="src/js/map.js"></script>
 </body>
 

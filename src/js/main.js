@@ -2,6 +2,63 @@
    MAIN.JS navigation, products, order modal
    ============================================ */
 
+/* ---------- Experience counter ---------- */
+function animateYearsCount() {
+  const yearsCount = document.querySelector(".years-count");
+  if (!yearsCount) return;
+
+  const target = Number(yearsCount.dataset.target);
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    yearsCount.textContent = String(target);
+    return;
+  }
+
+  const duration = 3500;
+  const startTime = performance.now();
+
+  function updateYearsCount(currentTime) {
+    const progress = Math.min((currentTime - startTime) / duration, 1);
+    const easedProgress = 1 - Math.pow(1 - progress, 3);
+    yearsCount.textContent = String(Math.round(target * easedProgress));
+    if (progress < 1) requestAnimationFrame(updateYearsCount);
+  }
+
+  requestAnimationFrame(updateYearsCount);
+}
+window.addEventListener("load", animateYearsCount);
+
+/* ---------- Smooth section reveals ---------- */
+let revealObserver;
+
+function observeRevealItems(root = document) {
+  const revealItems = root.querySelectorAll(
+    ".section-head, .why-item, .stat-row, .process-step, .product-card, .dist-info, #map, .site-footer > .container",
+  );
+
+  revealItems.forEach((item) => {
+    item.classList.add("reveal-item");
+    if (revealObserver) revealObserver.observe(item);
+  });
+}
+
+if ("IntersectionObserver" in window) {
+  revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -40px" },
+  );
+  observeRevealItems();
+} else {
+  document.querySelectorAll(
+    ".section-head, .why-item, .stat-row, .process-step, .product-card, .dist-info, #map, .site-footer > .container",
+  ).forEach((item) => item.classList.add("is-visible"));
+}
+
 /* ---------- Mobile nav toggle ---------- */
 const navToggle = document.getElementById("navToggle");
 const navLinks = document.getElementById("navLinks");
@@ -66,6 +123,7 @@ function renderProductGrid() {
     </div>
   `,
   ).join("");
+  observeRevealItems(productGrid);
 }
 
 (async () => {
