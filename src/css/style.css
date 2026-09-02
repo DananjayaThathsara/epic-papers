@@ -4,7 +4,7 @@
 
 :root {
   --green-dark: #155724;
-  --green: #2e8b47;
+  --green: #00c500;
   --green-mid: #37995a;
   --green-light: #e7f4ea;
   --green-pale: #f2f8f3;
@@ -27,6 +27,14 @@
 }
 html {
   scroll-behavior: smooth;
+}
+#home,
+#shop,
+#why,
+#distribution,
+#process,
+#contact {
+  scroll-margin-top: 88px;
 }
 body {
   margin: 0;
@@ -158,9 +166,10 @@ button {
 }
 .logo-text span {
   display: block;
-  font-size: 0.6rem;
+  font-size: 0.75rem;
   color: var(--gray-light);
   letter-spacing: 0.08em;
+  font-weight:700;
 }
 
 .nav-links {

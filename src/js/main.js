@@ -64,7 +64,37 @@ const navToggle = document.getElementById("navToggle");
 const navLinks = document.getElementById("navLinks");
 if (navToggle) {
   navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
-  navLinks.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => navLinks.classList.remove("open")));
+  const sectionLinks = [...navLinks.querySelectorAll("a[href^='#']")];
+  const sections = sectionLinks.map((link) => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+
+  function updateActiveNav() {
+    const headerOffset = document.querySelector(".site-header")?.offsetHeight || 0;
+    const currentPosition = window.scrollY + headerOffset + 80;
+    let currentSection = sections[0];
+
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+      currentSection = sections[sections.length - 1];
+    } else {
+      sections.forEach((section) => {
+        if (section.offsetTop <= currentPosition) currentSection = section;
+      });
+    }
+
+    sectionLinks.forEach((link) => {
+      link.classList.toggle("active", link.getAttribute("href") === `#${currentSection.id}`);
+    });
+  }
+
+  sectionLinks.forEach((link) =>
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      sectionLinks.forEach((item) => item.classList.remove("active"));
+      link.classList.add("active");
+    }),
+  );
+  window.addEventListener("scroll", updateActiveNav, { passive: true });
+  window.addEventListener("resize", updateActiveNav);
+  updateActiveNav();
 }
 
 /* ---------- Floating WhatsApp button (mobile) ---------- */

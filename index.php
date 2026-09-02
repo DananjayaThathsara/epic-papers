@@ -43,11 +43,11 @@ $loggedIn = is_logged_in();
       </div>
     <?php endif; ?>
     <nav class="nav">
-      <a href="#home" class="logo">
+      <a href="index.php" class="logo">
         <img src="src/images/logo.png" alt="" width="60" height="60">
         <span class="logo-text">
-          <strong>EPIC PAPER</strong>
-          <span>PACKAGING SOLUTIONS</span>
+          <!-- <strong>EPIC PAPER</strong> -->
+          <!-- <span>PACKAGING SOLUTIONS</span> -->
         </span>
       </a>
 
@@ -403,7 +403,7 @@ $loggedIn = is_logged_in();
     SITE_CONFIG.WHATSAPP_NUMBER = "<?= h($settings['whatsapp_number']) ?>";
   </script>
   <script src="src/js/icons.js"></script>
-  <script src="src/js/main.js?v=3"></script>
+  <script src="src/js/main.js?v=5"></script>
   <script src="src/js/map.js"></script>
 </body>
 

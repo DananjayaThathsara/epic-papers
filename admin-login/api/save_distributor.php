@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__ . '/../../includes/security_headers.php'; send_security_headers();
+require_once __DIR__ . '/../../includes/security_headers.php';
+send_security_headers();
 require_once __DIR__ . '/../../config/db.php';
 require_once __DIR__ . '/../../includes/auth.php';
 require_once __DIR__ . '/../../includes/helpers.php';
@@ -21,8 +22,8 @@ $lat      = $input['lat'] ?? null;
 $lng      = $input['lng'] ?? null;
 $id       = $input['id'] ?? null;
 
-if ($name === '' || $lat === null || $lng === null || !is_numeric($lat) || !is_numeric($lng)) {
-    json_response(['error' => 'name, lat and lng are required'], 422);
+if ($lat === null || $lng === null || !is_numeric($lat) || !is_numeric($lng)) {
+    json_response(['error' => 'lat and lng are required'], 422);
 }
 
 $db = get_db();

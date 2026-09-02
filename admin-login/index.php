@@ -25,7 +25,7 @@ $adminUsername = current_admin_username();
     <nav class="nav">
       <a href="../index.php" class="logo">
         <img src="../src/images/logo.png" alt="" width="60" height="60">
-        <span class="logo-text"><strong>EPIC PAPER</strong><span>PACKAGING SOLUTIONS</span></span>
+        <!-- <span class="logo-text"><strong>EPIC PAPER</strong><span>PACKAGING SOLUTIONS</span></span> -->
       </a>
       <div class="nav-cta admin-nav-cta">
         <span class="admin-user-badge">
@@ -156,7 +156,7 @@ $adminUsername = current_admin_username();
               <div class="field-row">
                 <div class="field">
                   <label for="pName">Distributor Name</label>
-                  <input type="text" id="pName" required placeholder="e.g. Kandy Distributor">
+                  <input type="text" id="pName" placeholder="e.g. Kandy Distributor">
                 </div>
                 <div class="field">
                   <label for="pDistrict">District</label>
