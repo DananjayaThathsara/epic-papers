@@ -24,7 +24,7 @@ $loggedIn = is_logged_in();
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
-  <link rel="stylesheet" href="src/css/style.css?v=3">
+  <link rel="stylesheet" href="src/css/style.css?v=4">
 </head>
 
 <body>
