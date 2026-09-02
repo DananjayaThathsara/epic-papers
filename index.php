@@ -16,7 +16,7 @@ $loggedIn = is_logged_in();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Epic Paper | Professional Pharmaceutical Paper Packaging</title>
   <meta name="description" content="Epic Paper Sri Lanka's trusted pharmaceutical paper packaging manufacturer. Medicine envelopes, pharmacy bags and speciality paper products.">
-  <link rel="icon" href="src/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="src/images/favicon.png" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,11 +44,7 @@ $loggedIn = is_logged_in();
     <?php endif; ?>
     <nav class="nav">
       <a href="#home" class="logo">
-        <svg class="logo-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M24 3 L44 14 V34 L24 45 L4 34 V14 Z" fill="#2e8b47" />
-          <path d="M24 3 L44 14 L24 24 L4 14 Z" fill="#37995a" />
-          <path d="M24 24 V45 L44 34 V14 Z" fill="#155724" />
-        </svg>
+        <img src="src/images/logo.png" alt="" width="60" height="60">
         <span class="logo-text">
           <strong>EPIC PAPER</strong>
           <span>PACKAGING SOLUTIONS</span>
