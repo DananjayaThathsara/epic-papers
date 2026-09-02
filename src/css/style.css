@@ -3,7 +3,7 @@
    ============================================ */
 
 :root {
-  --green-dark: #155724;
+  --green-dark: #00c500;
   --green: #00c500;
   --green-mid: #37995a;
   --green-light: #e7f4ea;
@@ -29,6 +29,7 @@ html {
   scroll-behavior: smooth;
 }
 #home,
+#about,
 #shop,
 #why,
 #distribution,
@@ -169,7 +170,7 @@ button {
   font-size: 0.75rem;
   color: var(--gray-light);
   letter-spacing: 0.08em;
-  font-weight:700;
+  font-weight: 700;
 }
 
 .nav-links {
@@ -390,7 +391,13 @@ button {
   position: absolute;
   inset: 0;
   background-image: radial-gradient(var(--border) 1px, transparent 1px);
-  background-size: 18px 18px;
+  background-size:
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    18px 18px;
+  animation: promise-dots-drift 18s linear infinite;
   opacity: 0.6;
 }
 .medicine-bag {
@@ -417,6 +424,17 @@ button {
 }
 .section-head h2 {
   font-size: 1.9rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+.section-head h2::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: var(--green);
 }
 .reveal-item {
   opacity: 0;
@@ -457,6 +475,391 @@ button {
   background: var(--green-pale);
 }
 
+/* ===== About ===== */
+.about-section {
+  background: var(--green-pale);
+}
+@keyframes about-content-load {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes about-paragraph-load {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes about-promise-load {
+  from {
+    opacity: 0;
+    transform: translateX(80px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+  gap: 64px;
+  align-items: center;
+}
+.about-section .section-head {
+  margin-bottom: 0;
+  max-width: 720px;
+}
+.about-section .section-head h2 {
+  max-width: 620px;
+}
+.about-section .section-head p {
+  max-width: 680px;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.about-section .section-head p:last-child {
+  margin-bottom: 0;
+}
+.about-promise {
+  position: relative;
+  overflow: hidden;
+  min-height: 270px;
+  padding: 40px 36px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: var(--green);
+  background-image:
+    radial-gradient(circle at 88% 82%, transparent 0 52px, rgba(255, 255, 255, 0.2) 53px 54px, transparent 55px),
+    radial-gradient(circle at 88% 82%, transparent 0 78px, rgba(255, 255, 255, 0.13) 79px 80px, transparent 81px),
+    radial-gradient(circle at 76% 4%, transparent 0 38px, rgba(255, 255, 255, 0.16) 39px 40px, transparent 41px),
+    radial-gradient(circle at 10% 108%, transparent 0 44px, rgba(255, 255, 255, 0.13) 45px 46px, transparent 47px),
+    radial-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px);
+  background-size: 18px 18px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.14);
+}
+.about-section .section-head.reveal-item.is-visible {
+  animation: about-content-load 1600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.about-section .section-head.reveal-item.is-visible p {
+  animation: about-paragraph-load 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.about-section .section-head.reveal-item.is-visible p:nth-of-type(2) {
+  animation-delay: 180ms;
+}
+.about-section .section-head.reveal-item.is-visible p:nth-of-type(3) {
+  animation-delay: 360ms;
+}
+.about-section .about-promise.reveal-item.is-visible {
+  animation:
+    promise-dots-drift 18s linear infinite,
+    about-promise-load 1600ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.about-section .about-promise.reveal-item.is-visible > * {
+  animation: promise-content-load 800ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.about-section .about-promise.reveal-item.is-visible > strong {
+  animation-delay: 180ms;
+}
+.about-section .about-promise.reveal-item.is-visible > span:last-child {
+  animation-delay: 360ms;
+}
+@keyframes promise-content-load {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.about-promise::after {
+  content: "";
+  position: absolute;
+  right: -28px;
+  bottom: -44px;
+  width: 130px;
+  height: 130px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 24px rgba(255, 255, 255, 0.07),
+    0 0 0 48px rgba(255, 255, 255, 0.045);
+  animation: promise-ring-pulse 8s ease-in-out infinite;
+}
+.about-promise::before {
+  content: "";
+  position: absolute;
+  top: -52px;
+  right: 72px;
+  width: 92px;
+  height: 92px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  animation: promise-ring-pulse 10s ease-in-out infinite reverse;
+}
+@keyframes promise-dots-drift {
+  from {
+    background-position:
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0;
+  }
+  to {
+    background-position:
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      18px 18px;
+  }
+}
+@keyframes promise-ring-pulse {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+}
+.promise-pattern-icons {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  color: rgba(255, 255, 255, 0.16);
+  pointer-events: none;
+}
+.promise-pattern-icons svg {
+  position: absolute;
+  width: 88px;
+  height: 88px;
+}
+.promise-cover-icon {
+  right: 110px;
+  bottom: 16px;
+  width: 70px !important;
+  height: 70px !important;
+  transform: rotate(-10deg);
+  animation: promise-cover-float 7s ease-in-out infinite;
+}
+.promise-medicine-icon {
+  right: 22px;
+  top: 30px;
+  width: 72px !important;
+  height: 96px !important;
+  opacity: 0.82;
+  transform: rotate(10deg);
+  animation: promise-medicine-float 9s ease-in-out infinite reverse;
+}
+.promise-bag-icon {
+  left: 50%;
+  bottom: -112px;
+  width: 190px !important;
+  height: 238px !important;
+  opacity: 0.28;
+  transform: translateX(-50%) rotate(-8deg);
+  animation: promise-bag-float 11s ease-in-out infinite;
+}
+.promise-bag-icon-secondary {
+  left: 24px;
+  bottom: -44px;
+  width: 72px !important;
+  height: 90px !important;
+  opacity: 0.25;
+  transform: rotate(8deg);
+  animation: promise-small-bag-float 8s ease-in-out infinite reverse;
+}
+.promise-bag-icon-small {
+  left: auto;
+  right: 42px;
+  bottom: -28px;
+  width: 48px !important;
+  height: 60px !important;
+  opacity: 0.2;
+  transform: rotate(-3deg);
+  animation: promise-tiny-bag-float 10s ease-in-out infinite;
+}
+.promise-bag-icon-top {
+  left: 28px;
+  top: -42px;
+  width: 60px !important;
+  height: 75px !important;
+  opacity: 0.2;
+  transform: rotate(-12deg);
+  animation: promise-tiny-bag-float 12s ease-in-out infinite reverse;
+}
+.promise-bag-icon-side {
+  right: -8px;
+  top: 108px;
+  width: 56px !important;
+  height: 70px !important;
+  opacity: 0.18;
+  transform: rotate(12deg);
+  animation: promise-side-bag-float 9s ease-in-out infinite;
+}
+.promise-bag-icon-upper {
+  right: 180px;
+  top: -30px;
+  width: 52px !important;
+  height: 65px !important;
+  opacity: 0.18;
+  transform: rotate(7deg);
+  animation: promise-tiny-bag-float 11s ease-in-out infinite;
+}
+.promise-bag-icon-lower {
+  right: 170px;
+  bottom: -38px;
+  width: 62px !important;
+  height: 78px !important;
+  opacity: 0.2;
+  transform: rotate(-6deg);
+  animation: promise-side-bag-float 13s ease-in-out infinite reverse;
+}
+.promise-title-bag-one {
+  left: 210px;
+  top: 12px;
+  width: 42px !important;
+  height: 54px !important;
+  opacity: 0.2;
+  transform: rotate(8deg);
+  animation: promise-tiny-bag-float 9s ease-in-out infinite reverse;
+}
+.promise-title-bag-two {
+  right: 92px;
+  top: 72px;
+  width: 46px !important;
+  height: 58px !important;
+  opacity: 0.18;
+  transform: rotate(-8deg);
+  animation: promise-side-bag-float 10s ease-in-out infinite;
+}
+.promise-bag-extra {
+  opacity: 0.24;
+}
+.promise-bag-extra-one {
+  left: 92px;
+  top: -34px;
+  width: 54px !important;
+  height: 68px !important;
+  transform: rotate(-7deg);
+  animation: promise-tiny-bag-float 8s ease-in-out infinite;
+}
+.promise-bag-extra-two {
+  right: -12px;
+  bottom: 42px;
+  width: 58px !important;
+  height: 72px !important;
+  transform: rotate(6deg);
+  animation: promise-side-bag-float 7s ease-in-out infinite reverse;
+}
+.promise-bag-extra-three {
+  left: 250px;
+  bottom: -42px;
+  width: 58px !important;
+  height: 72px !important;
+  transform: rotate(-5deg);
+  animation: promise-tiny-bag-float 9s ease-in-out infinite reverse;
+}
+@keyframes promise-cover-float {
+  0%,
+  100% {
+    transform: rotate(-10deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-4deg) translateY(-14px);
+  }
+}
+@keyframes promise-medicine-float {
+  0%,
+  100% {
+    transform: rotate(10deg) translateY(0);
+  }
+  50% {
+    transform: rotate(3deg) translateY(12px);
+  }
+}
+@keyframes promise-bag-float {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(-8deg) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) rotate(-2deg) translateY(-18px);
+  }
+}
+@keyframes promise-small-bag-float {
+  0%,
+  100% {
+    transform: rotate(8deg) translateY(0);
+  }
+  50% {
+    transform: rotate(2deg) translateY(-11px);
+  }
+}
+@keyframes promise-tiny-bag-float {
+  0%,
+  100% {
+    transform: rotate(-3deg) translateY(0);
+  }
+  50% {
+    transform: rotate(3deg) translateY(-10px);
+  }
+}
+@keyframes promise-side-bag-float {
+  0%,
+  100% {
+    transform: rotate(12deg) translateY(0);
+  }
+  50% {
+    transform: rotate(4deg) translateY(12px);
+  }
+}
+.about-promise-label {
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.about-promise strong {
+  display: block;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 16px;
+  color: var(--white);
+  font-family: var(--font-head);
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+.about-promise > span:last-child {
+  display: block;
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
 /* ===== Products ===== */
 .product-grid {
   display: grid;
@@ -476,6 +879,9 @@ button {
     opacity 1100ms cubic-bezier(0.16, 1, 0.3, 1),
     transform 1100ms cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.product-card:not(:hover) {
+  box-shadow: 0 5px 16px rgba(23, 34, 26, 0.04);
 }
 .product-card:nth-child(2) {
   transition-delay: 140ms;
@@ -551,6 +957,23 @@ button {
   justify-content: center;
   margin: 0 auto 14px;
   color: var(--green);
+  transition:
+    color 350ms ease,
+    background 350ms ease,
+    transform 500ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 350ms ease;
+}
+.why-item {
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.why-item:hover {
+  transform: translateY(-5px);
+}
+.why-item:hover .icon-circle {
+  background: var(--green);
+  color: var(--white);
+  transform: scale(1.08);
+  box-shadow: 0 8px 18px rgba(0, 197, 0, 0.2);
 }
 .why-item .icon-circle svg {
   width: 26px;
@@ -604,6 +1027,13 @@ button {
   gap: 14px;
   padding: 16px 18px;
   border-bottom: 1px solid var(--border);
+  transition:
+    background 250ms ease,
+    padding-left 350ms ease;
+}
+.stat-row:hover {
+  background: var(--green-pale);
+  padding-left: 24px;
 }
 .stat-row:last-child {
   border-bottom: none;
@@ -682,6 +1112,17 @@ button {
   justify-content: center;
   margin: 0 auto 14px;
   color: var(--green);
+  transition:
+    background 350ms ease,
+    color 350ms ease,
+    transform 500ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 350ms ease;
+}
+.process-step:hover .icon-circle {
+  background: var(--green);
+  color: var(--white);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 9px 20px rgba(0, 197, 0, 0.2);
 }
 .process-step .icon-circle svg {
   width: 28px;
@@ -1399,6 +1840,20 @@ button {
   }
 }
 @media (max-width: 760px) {
+  .site-header {
+    box-shadow: 0 5px 16px rgba(23, 34, 26, 0.12);
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .about-section .section-head p {
+    line-height: 1.65;
+  }
+  .about-promise {
+    min-height: 0;
+    padding: 28px 24px;
+  }
   .nav-links {
     position: absolute;
     top: 100%;
@@ -1534,17 +1989,37 @@ button {
     display: none;
   }
   .process-step {
-    display: flex;
+    display: grid;
+    grid-template-columns: 64px 30px minmax(82px, 104px) minmax(0, 1fr);
     align-items: center;
-    gap: 16px;
+    gap: 8px;
     text-align: left;
+    width: 100%;
   }
   .process-step .icon-circle {
     margin: 0;
     flex-shrink: 0;
+    grid-column: 1;
+    grid-row: 1;
   }
-  .process-step span {
+  .process-step .num {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: center;
+  }
+  .process-step strong {
+    grid-column: 3;
+    grid-row: 1;
     margin: 0;
+    line-height: 1.25;
+  }
+  .process-step > span:last-child {
+    grid-column: 4;
+    grid-row: 1;
+    margin: 0;
+    max-width: none;
+    line-height: 1.45;
+    text-align: left;
   }
   .footer-grid {
     grid-template-columns: 1fr;
@@ -1628,6 +2103,31 @@ button {
   }
   .product-card.is-visible .product-thumb img,
   .product-card.is-visible .product-thumb svg {
+    animation: none;
+  }
+  .product-card:hover,
+  .why-item:hover,
+  .why-item:hover .icon-circle,
+  .process-step:hover .icon-circle {
+    transform: none;
+  }
+  .about-promise,
+  .about-promise::before,
+  .about-promise::after {
+    animation: none;
+  }
+  .about-section > h2,
+  .about-section .section-head,
+  .about-section .about-promise {
+    opacity: 1;
+    transform: none;
+  }
+  .about-section .about-promise > * {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  .promise-pattern-icons svg {
     animation: none;
   }
 }

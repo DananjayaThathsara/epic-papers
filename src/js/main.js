@@ -26,13 +26,14 @@ function animateYearsCount() {
   requestAnimationFrame(updateYearsCount);
 }
 window.addEventListener("load", animateYearsCount);
+window.addEventListener("load", () => document.body.classList.add("page-loaded"));
 
 /* ---------- Smooth section reveals ---------- */
 let revealObserver;
 
 function observeRevealItems(root = document) {
   const revealItems = root.querySelectorAll(
-    ".section-head, .why-item, .stat-row, .process-step, .product-card, .dist-info, #map, .site-footer > .container",
+    ".section-head, .about-section > h2, .about-promise, .why-item, .stat-row, .process-step, .product-card, .dist-info, #map, .site-footer > .container",
   );
 
   revealItems.forEach((item) => {
@@ -55,7 +56,9 @@ if ("IntersectionObserver" in window) {
   observeRevealItems();
 } else {
   document
-    .querySelectorAll(".section-head, .why-item, .stat-row, .process-step, .product-card, .dist-info, #map, .site-footer > .container")
+    .querySelectorAll(
+      ".section-head, .about-section > h2, .about-promise, .why-item, .stat-row, .process-step, .product-card, .dist-info, #map, .site-footer > .container",
+    )
     .forEach((item) => item.classList.add("is-visible"));
 }
 
@@ -204,12 +207,12 @@ function buildSizeDiagram(sizes, selected) {
       const top = baseline - h;
       const hw = w * 0.32;
       const active = s === selected;
-      const fill = active ? "#2e8b47" : "#ffffff";
+      const fill = active ? "#00c500" : "#ffffff";
       const stroke = active ? "#155724" : "#c9d6cc";
 
       return `
       <path d="M${cx - hw} ${top} Q${cx - hw} ${top - 11} ${cx} ${top - 11} Q${cx + hw} ${top - 11} ${cx + hw} ${top}"
-            fill="none" stroke="${active ? "#2e8b47" : "#c9d6cc"}" stroke-width="2.5" stroke-linecap="round"/>
+            fill="none" stroke="${active ? "#00c500" : "#c9d6cc"}" stroke-width="2.5" stroke-linecap="round"/>
       <path d="M${cx - w / 2} ${top} L${cx - w / 2 - 2} ${baseline} Q${cx - w / 2 - 2} ${baseline + 4} ${cx - w / 2 + 3} ${baseline + 4}
                L${cx + w / 2 - 3} ${baseline + 4} Q${cx + w / 2 + 2} ${baseline + 4} ${cx + w / 2 + 2} ${baseline} L${cx + w / 2} ${top} Z"
             fill="${fill}" stroke="${stroke}" stroke-width="2"/>
@@ -234,7 +237,7 @@ function buildColorSwatch(colors, hexes, selected) {
       const fill = hexes[i] || "#e3ebe4";
       return `
       <circle cx="${cx}" cy="60" r="24" fill="${fill}" stroke="#c9d6cc" stroke-width="1.5"/>
-      ${active ? `<circle cx="${cx}" cy="60" r="30" fill="none" stroke="#2e8b47" stroke-width="2.5"/>` : ""}
+      ${active ? `<circle cx="${cx}" cy="60" r="30" fill="none" stroke="#00c500" stroke-width="2.5"/>` : ""}
       <text x="${cx}" y="102" font-family="Inter" font-size="9" font-weight="${active ? 700 : 500}"
             fill="${active ? "#155724" : "#8a9791"}" text-anchor="middle">${escapeHtml(c)}</text>`;
     })

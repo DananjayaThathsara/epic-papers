@@ -7,7 +7,7 @@ function makePinIcon() {
   return L.divIcon({
     className: "epic-pin",
     html: `<svg width="30" height="38" viewBox="0 0 30 38" xmlns="http://www.w3.org/2000/svg">
-             <path d="M15 0C6.7 0 0 6.7 0 15c0 10.5 15 23 15 23s15-12.5 15-23C30 6.7 23.3 0 15 0Z" fill="#2e8b47"/>
+             <path d="M15 0C6.7 0 0 6.7 0 15c0 10.5 15 23 15 23s15-12.5 15-23C30 6.7 23.3 0 15 0Z" fill="#00c500"/>
              <circle cx="15" cy="15" r="6" fill="#ffffff"/>
            </svg>`,
     iconSize: [30, 38],

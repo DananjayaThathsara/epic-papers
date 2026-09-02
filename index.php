@@ -15,7 +15,7 @@ $loggedIn = is_logged_in();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Epic Paper | Professional Pharmaceutical Paper Packaging</title>
-  <meta name="description" content="Epic Paper Sri Lanka's trusted pharmaceutical paper packaging manufacturer. Medicine envelopes, pharmacy bags and speciality paper products.">
+  <meta name="description" content="Epic Paper (Pvt) Ltd is a trusted Sri Lankan manufacturer of pharmaceutical paper packaging, medicine envelopes, pharmacy bags, drug covers and custom-printed paper packaging solutions.">
   <link rel="icon" href="src/images/favicon.png" type="image/svg+xml">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,6 +55,7 @@ $loggedIn = is_logged_in();
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#shop">Shop</a></li>
         <li><a href="#why">Why Choose Us</a></li>
         <li><a href="#distribution">Distribution</a></li>
@@ -117,6 +118,108 @@ $loggedIn = is_logged_in();
       </div>
 
 
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section about-section" id="about">
+    <h2 style="text-align:center;margin-bottom:36px;">About <span style="color:var(--green)">Epic Paper</span></h2>
+    <div class="container about-grid">
+
+      <div class="section-head">
+
+        <p>Established in 2005, Epic Paper (Pvt) Ltd is a trusted Sri Lankan manufacturer of high-quality pharmaceutical paper packaging. We specialize in medicine envelopes, pharmacy envelopes, pharmacy bags, drug covers, and custom-printed paper packaging solutions.</p>
+        <p>With over 20 years of manufacturing experience, we combine our own machinery, locally developed technology, high-quality branded paper materials, and strict QA &amp; QC practices to deliver consistent products our customers can trust.</p>
+        <p>Proudly Made in Sri Lanka, we serve government and private hospitals, pharmacies, doctors, wholesalers, and medicine distributors across the country.</p>
+      </div>
+      <div class="about-promise">
+        <div class="promise-pattern-icons" aria-hidden="true">
+          <svg class="promise-cover-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M5 4h14v16H5z" />
+            <path d="M8 8h8M8 11h8M8 14h5" />
+            <path d="M8 17h8" />
+          </svg>
+          <svg class="promise-medicine-icon" viewBox="0 0 48 64" fill="none" stroke="currentColor" stroke-width="1.4">
+            <rect x="5" y="4" width="38" height="56" rx="3" />
+            <path d="M10 14h28M10 18h18" />
+            <circle cx="24" cy="33" r="9" />
+            <path d="M24 28v10M19 33h10M10 49h28" />
+          </svg>
+          <svg class="promise-bag-icon" viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M24 25c1-13 5-19 16-19s15 6 16 19" />
+            <path d="M14 24h52l5 68c.3 4-2.5 6-6 6H15c-3.5 0-6.3-2-6-6l5-68Z" />
+            <path d="M14 31h52" />
+            <rect x="18" y="55" width="44" height="12" rx="2" />
+            <circle cx="40" cy="43" r="10" />
+            <path d="M40 37v12M34 43h12" />
+            <path d="M25 78h30" />
+          </svg>
+          <svg class="promise-bag-icon promise-bag-icon-secondary" viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M24 25c1-13 5-19 16-19s15 6 16 19" />
+            <path d="M14 24h52l5 68c.3 4-2.5 6-6 6H15c-3.5 0-6.3-2-6-6l5-68Z" />
+            <path d="M14 31h52M25 78h30" />
+            <circle cx="40" cy="51" r="8" />
+            <path d="M40 46v10M35 51h10" />
+          </svg>
+          <svg class="promise-bag-icon promise-bag-icon-small" viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M24 25c1-13 5-19 16-19s15 6 16 19" />
+            <path d="M14 24h52l5 68c.3 4-2.5 6-6 6H15c-3.5 0-6.3-2-6-6l5-68Z" />
+            <path d="M14 31h52M25 78h30" />
+          </svg>
+          <svg class="promise-bag-icon promise-bag-icon-top" viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M24 25c1-13 5-19 16-19s15 6 16 19" />
+            <path d="M14 24h52l5 68c.3 4-2.5 6-6 6H15c-3.5 0-6.3-2-6-6l5-68Z" />
+            <path d="M14 31h52M25 78h30" />
+          </svg>
+          <svg class="promise-bag-icon promise-bag-icon-side" viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M24 25c1-13 5-19 16-19s15 6 16 19" />
+            <path d="M14 24h52l5 68c.3 4-2.5 6-6 6H15c-3.5 0-6.3-2-6-6l5-68Z" />
+            <circle cx="40" cy="53" r="8" />
+            <path d="M40 48v10M35 53h10" />
+          </svg>
+          <svg class="promise-bag-icon promise-bag-icon-upper" viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M24 25c1-13 5-19 16-19s15 6 16 19" />
+            <path d="M14 24h52l5 68c.3 4-2.5 6-6 6H15c-3.5 0-6.3-2-6-6l5-68Z" />
+            <path d="M14 31h52M25 78h30" />
+          </svg>
+          <svg class="promise-bag-icon promise-bag-icon-lower" viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M24 25c1-13 5-19 16-19s15 6 16 19" />
+            <path d="M14 24h52l5 68c.3 4-2.5 6-6 6H15c-3.5 0-6.3-2-6-6l5-68Z" />
+            <circle cx="40" cy="53" r="8" />
+            <path d="M40 48v10M35 53h10" />
+          </svg>
+          <svg class="promise-bag-icon promise-title-bag-one" viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M24 25c1-13 5-19 16-19s15 6 16 19" />
+            <path d="M14 24h52l5 68c.3 4-2.5 6-6 6H15c-3.5 0-6.3-2-6-6l5-68Z" />
+            <path d="M14 31h52M25 78h30" />
+          </svg>
+          <svg class="promise-bag-icon promise-title-bag-two" viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M24 25c1-13 5-19 16-19s15 6 16 19" />
+            <path d="M14 24h52l5 68c.3 4-2.5 6-6 6H15c-3.5 0-6.3-2-6-6l5-68Z" />
+            <circle cx="40" cy="53" r="8" />
+            <path d="M40 48v10M35 53h10" />
+          </svg>
+          <svg class="promise-bag-icon promise-bag-extra promise-bag-extra-one" viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M24 25c1-13 5-19 16-19s15 6 16 19" />
+            <path d="M14 24h52l5 68c.3 4-2.5 6-6 6H15c-3.5 0-6.3-2-6-6l5-68Z" />
+            <path d="M14 31h52M25 78h30" />
+          </svg>
+          <svg class="promise-bag-icon promise-bag-extra promise-bag-extra-two" viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M24 25c1-13 5-19 16-19s15 6 16 19" />
+            <path d="M14 24h52l5 68c.3 4-2.5 6-6 6H15c-3.5 0-6.3-2-6-6l5-68Z" />
+            <circle cx="40" cy="53" r="8" />
+            <path d="M40 48v10M35 53h10" />
+          </svg>
+          <svg class="promise-bag-icon promise-bag-extra promise-bag-extra-three" viewBox="0 0 80 100" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M24 25c1-13 5-19 16-19s15 6 16 19" />
+            <path d="M14 24h52l5 68c.3 4-2.5 6-6 6H15c-3.5 0-6.3-2-6-6l5-68Z" />
+            <path d="M14 31h52M25 78h30" />
+          </svg>
+        </div>
+        <span class="about-promise-label">Our Promise</span>
+        <strong>Built by Us.<br>Made in Sri Lanka.<br>Trusted for Quality.</strong>
+        <span>Reliable packaging made for healthcare professionals and patients.</span>
+      </div>
     </div>
   </section>
 

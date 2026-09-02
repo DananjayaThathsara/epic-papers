@@ -1,2 +1,8 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+# Keep private management pages and API endpoints out of search results.
+Disallow: /admin-login/
+Disallow: /api/
+
+Sitemap: https://epicpaper.lk/sitemap.xml
