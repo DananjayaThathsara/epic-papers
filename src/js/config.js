@@ -14,8 +14,8 @@ const SITE_CONFIG = {
   API_GET_DISTRIBUTORS: "api/get_distributors.php",
   API_SAVE_ORDER: "api/save_order.php",
 
-  // Admin endpoints used only by admin/index.php, so these paths are
-  // written relative to the /admin/ folder.
+  // Admin endpoints used only by admin-login/index.php, so these paths are
+  // written relative to the /admin-login/ folder.
   ADMIN_GET_PRODUCTS: "../api/get_products.php",
   ADMIN_GET_PRODUCT: "api/get_product.php",
   ADMIN_GET_DISTRIBUTORS: "../api/get_distributors.php",

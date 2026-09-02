@@ -34,7 +34,7 @@ $loggedIn = is_logged_in();
     <?php if ($loggedIn): ?>
       <div class="" style="background: var(--green);text-align: right;padding: 5px;">
         <div class="container">
-          <a href="admin/index.php" style="color: var(--white);
+          <a href="admin-login/index.php" style="color: var(--white);
     text-decoration: underline;
     text-underline-offset: 2px;
     opacity: .85;">Admin Panel</a>
@@ -321,7 +321,7 @@ $loggedIn = is_logged_in();
       </div>
     </div>
 
-    <div class="footer-bottom">© 2026 Epic Paper (Pvt) Ltd. All Rights Reserved.<?php if ($loggedIn): ?> · <a href="admin/index.php">Admin Panel</a><?php endif; ?></div>
+    <div class="footer-bottom">© 2026 Epic Paper (Pvt) Ltd. All Rights Reserved.<?php if ($loggedIn): ?> · <a href="admin-login/index.php">Admin Panel</a><?php endif; ?></div>
   </footer>
 
   <!-- ===================== ORDER MODAL ===================== -->

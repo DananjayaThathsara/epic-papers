@@ -18,7 +18,7 @@ if (waFloat) {
 
 /* ---------- Product catalogue ----------
    Products, sizes, colours and photos are all managed from the admin
-   panel (admin/index.php) and stored in MySQL. Fallback illustrations
+   panel (admin-login/index.php) and stored in MySQL. Fallback illustrations
    (used when a product/size/colour has no uploaded photo) live in
    src/js/icons.js, loaded before this file. */
 let PRODUCTS = [];
