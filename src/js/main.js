@@ -122,7 +122,18 @@ function productThumbHtml(p) {
   if (p.image_path) {
     return `<img src="${escapeHtml(p.image_path)}" alt="${escapeHtml(p.name)}" style="width:100%;height:100%;object-fit:contain;">`;
   }
-  return ICONS[p.icon_key] || ICONS.plain;
+
+  let icon = ICONS[p.icon_key] || ICONS.plain;
+  if (p.icon_key === "custom" && Array.isArray(p.colorHex)) {
+    const validColors = p.colorHex.filter((color) => /^#[0-9a-f]{6}$/i.test(color));
+    if (validColors[0]) {
+      icon = icon.replace('fill="#ffffff" stroke="#c9d6cc"', `fill="${validColors[0]}" stroke="#c9d6cc"`);
+    }
+    if (validColors[1]) {
+      icon = icon.replace('fill="#c9a06a" stroke="#c9d6cc"', `fill="${validColors[1]}" stroke="#c9d6cc"`);
+    }
+  }
+  return icon;
 }
 
 async function loadProducts() {

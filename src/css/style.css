@@ -397,7 +397,6 @@ button {
     100% 100%,
     100% 100%,
     18px 18px;
-  animation: promise-dots-drift 18s linear infinite;
   opacity: 0.6;
 }
 .medicine-bag {

@@ -79,7 +79,7 @@ $loggedIn = is_logged_in();
   <section class="hero" id="home">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <span class="badge">23 YEARS OF EXCELLENCE</span>
+        <span class="badge">20+ YEARS OF EXCELLENCE</span>
         <h1>Professional <span class="accent">Pharmaceutical</span> Paper Packaging</h1>
         <p class="hero-desc">Trusted by pharmacies and healthcare businesses across</br> Sri Lanka for over two decades.</p>
 
@@ -112,7 +112,7 @@ $loggedIn = is_logged_in();
                 <circle cx="18" cy="8" r="2.4" />
                 <path d="M16.5 14.2c2.6.4 4.5 2.4 4.5 5.8" />
               </svg></span>
-            <strong class="years-feature"><span class="years-count" data-target="23">0</span>+ Years</strong><span>Experience</span>
+            <strong class="years-feature"><span class="years-count" data-target="20">0</span>+ Years</strong><span>Experience</span>
           </div>
         </div>
       </div>
@@ -128,9 +128,9 @@ $loggedIn = is_logged_in();
 
       <div class="section-head">
 
-        <p>Established in 2005, Epic Paper (Pvt) Ltd is a trusted Sri Lankan manufacturer of high-quality pharmaceutical paper packaging. We specialize in medicine envelopes, pharmacy envelopes, pharmacy bags, drug covers, and custom-printed paper packaging solutions.</p>
-        <p>With over 20 years of manufacturing experience, we combine our own machinery, locally developed technology, high-quality branded paper materials, and strict QA &amp; QC practices to deliver consistent products our customers can trust.</p>
-        <p>Proudly Made in Sri Lanka, we serve government and private hospitals, pharmacies, doctors, wholesalers, and medicine distributors across the country.</p>
+        <p>Established in 2005, Epic Paper (Pvt) Ltd is a trusted Sri Lankan manufacturer of high-quality pharmaceutical paper packaging. We specialize in medicine envelopes, pharmacy envelopes, pharmacy bags, drug covers and custom-printed paper packaging solutions.</p>
+        <p>With over 20 years of manufacturing experience, we combine our own machinery, locally developed technology, high-quality branded paper materials and strict QA &amp; QC practices to deliver consistent products our customers can trust.</p>
+        <p>Proudly Made in Sri Lanka, we serve government and private hospitals, pharmacies, doctors, wholesalers and medicine distributors across the country.</p>
       </div>
       <div class="about-promise">
         <div class="promise-pattern-icons" aria-hidden="true">
@@ -506,7 +506,7 @@ $loggedIn = is_logged_in();
     SITE_CONFIG.WHATSAPP_NUMBER = "<?= h($settings['whatsapp_number']) ?>";
   </script>
   <script src="src/js/icons.js?v=2"></script>
-  <script src="src/js/main.js?v=7"></script>
+  <script src="src/js/main.js?v=8"></script>
   <script src="src/js/map.js"></script>
 </body>
 
