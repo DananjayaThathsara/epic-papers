@@ -7,4 +7,4 @@ Require all denied
 Require all denied
 </Files>
 
-ErrorDocument 404 /projects/chandima/v11/404.php
+ErrorDocument 404 /404.php
