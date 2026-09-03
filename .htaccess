@@ -1,7 +1,10 @@
 # Block direct web access to sensitive files at the project root.
+
 <FilesMatch "^\.env">
-  Require all denied
+Require all denied
 </FilesMatch>
-<Files "*.sql">
-  Require all denied
+<Files "\*.sql">
+Require all denied
 </Files>
+
+ErrorDocument 404 /projects/chandima/v11/404.php
