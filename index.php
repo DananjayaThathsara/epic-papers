@@ -507,7 +507,7 @@ $loggedIn = is_logged_in();
   </script>
   <script src="src/js/icons.js?v=2"></script>
   <script src="src/js/main.js?v=8"></script>
-  <script src="src/js/map.js"></script>
+  <script src="src/js/map.js?v=2"></script>
 </body>
 
 </html>
