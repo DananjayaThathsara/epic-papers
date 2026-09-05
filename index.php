@@ -16,7 +16,8 @@ $loggedIn = is_logged_in();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Epic Paper | Professional Pharmaceutical Paper Packaging</title>
   <meta name="description" content="Epic Paper (Pvt) Ltd is a trusted Sri Lankan manufacturer of pharmaceutical paper packaging, medicine envelopes, pharmacy bags, drug covers and custom-printed paper packaging solutions.">
-  <link rel="icon" href="src/images/favicon.png" type="image/svg+xml">
+  <link rel="icon" href="src/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="src/images/favicon.svg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
