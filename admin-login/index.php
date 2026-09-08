@@ -195,7 +195,7 @@ $adminUsername = current_admin_username();
 
       <!-- ---------- Orders panel ---------- -->
       <section class="admin-panel" id="panel-orders">
-        <div class="admin-wrap">
+        <div class="admin-wrap-order" style="width: 100% !important">
           <div class="admin-topbar">
             <h1>Orders</h1>
           </div>

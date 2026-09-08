@@ -468,7 +468,7 @@ function renderOrdersTable(orders, page = 1) {
         <thead>
           <tr>
             <th>#ID</th>
-            <th>Customer</th>
+             <th>Customer</th>
             <th>Product</th>
             <th>Size</th>
             <th>Colour</th>
@@ -506,7 +506,7 @@ function renderOrdersTable(orders, page = 1) {
               <td class="cell-text" title="${escapeHtml(o.phone)}">${escapeHtml(o.phone.length > 12 ? o.phone.substring(0, 12) : o.phone)}</td>
               <td class="cell-text" title="${escapeHtml(o.location)}">${escapeHtml(o.location.length > 15 ? o.location.substring(0, 15) + "..." : o.location)}</td>
               <td><span class="cell-status">${escapeHtml(status)}</span></td>
-              <td class="cell-text" style="font-size:.8rem;color:var(--gray-light);">${escapeHtml(o.created_at ? o.created_at.split(" ")[0] : "")}</td>
+              <td class="cell-text order-date" style="font-size:.8rem;">${escapeHtml(o.created_at ? o.created_at.split(" ")[0] : "")}</td>
               <td>
                 <a href="${escapeHtml(waLink)}" target="_blank" rel="noopener" class="wa-btn" title="Send WhatsApp message to ${escapeHtml(o.customer_name)}">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
