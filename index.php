@@ -7,6 +7,7 @@ require_once __DIR__ . '/includes/helpers.php';
 
 $settings = get_settings();
 $loggedIn = is_logged_in();
+$seoProducts = get_db()->query('SELECT id, name, description, image_path FROM products ORDER BY sort_order, id')->fetchAll();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,8 +15,8 @@ $loggedIn = is_logged_in();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Epic Paper | Professional Pharmaceutical Paper Packaging</title>
-  <meta name="description" content="Epic Paper (Pvt) Ltd is a trusted Sri Lankan manufacturer of pharmaceutical paper packaging, medicine envelopes, pharmacy bags, drug covers and custom-printed paper packaging solutions.">
+  <title>Medicine Envelopes &amp; Pharmaceutical Packaging in Sri Lanka | Epic Paper</title>
+  <meta name="description" content="Epic Paper (Pvt) Ltd manufactures medicine envelopes, pharmacy bags, drug covers and custom pharmaceutical paper packaging in Sri Lanka for pharmacies, hospitals and distributors.">
   <meta name="keywords" content="medicine envelopes Sri Lanka, pharmaceutical paper packaging Sri Lanka, pharmacy bags Sri Lanka, drug covers Sri Lanka, medicine paper bags, pharmacy envelopes, custom printed paper packaging, pharmaceutical packaging manufacturer Sri Lanka, paper packaging supplier Sri Lanka, hospital packaging supplies, pharmacy packaging solutions">
   <link rel="canonical" href="https://epicpaper.lk/">
   <meta property="og:type" content="website">
@@ -110,8 +111,8 @@ $loggedIn = is_logged_in();
     <div class="container hero-grid">
       <div class="hero-copy">
         <span class="badge">20+ YEARS OF EXCELLENCE</span>
-        <h1>Professional <span class="accent">Pharmaceutical</span> Paper Packaging</h1>
-        <p class="hero-desc">Trusted by pharmacies and healthcare businesses across</br> Sri Lanka for over two decades.</p>
+        <h1>Medicine Envelopes &amp; <span class="accent">Pharmaceutical</span> Packaging in Sri Lanka</h1>
+        <p class="hero-desc">Trusted by pharmacies and healthcare businesses across<br> Sri Lanka for over two decades.</p>
 
         <div class="hero-features">
           <div class="hero-feature">
@@ -262,7 +263,18 @@ $loggedIn = is_logged_in();
       </div>
 
       <div class="product-grid" id="productGrid">
-        <!-- Product cards injected by main.js, loaded live from api/get_products.php -->
+        <?php foreach ($seoProducts as $product): ?>
+          <article class="product-card">
+            <div class="product-thumb">
+              <?php if ($product['image_path']): ?>
+                <img src="<?= h($product['image_path']) ?>" alt="<?= h($product['name']) ?>" width="320" height="168" style="width:100%;height:100%;object-fit:contain;">
+              <?php endif; ?>
+            </div>
+            <h3><?= h($product['name']) ?></h3>
+            <p><?= h($product['description'] ?? '') ?></p>
+            <button class="btn btn-outline order-btn" data-product="<?= h((string) $product['id']) ?>">Order Now</button>
+          </article>
+        <?php endforeach; ?>
       </div>
     </div>
   </section>
