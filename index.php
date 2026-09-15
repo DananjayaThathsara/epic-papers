@@ -16,6 +16,35 @@ $loggedIn = is_logged_in();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Epic Paper | Professional Pharmaceutical Paper Packaging</title>
   <meta name="description" content="Epic Paper (Pvt) Ltd is a trusted Sri Lankan manufacturer of pharmaceutical paper packaging, medicine envelopes, pharmacy bags, drug covers and custom-printed paper packaging solutions.">
+  <meta name="keywords" content="medicine envelopes Sri Lanka, pharmaceutical paper packaging Sri Lanka, pharmacy bags Sri Lanka, drug covers Sri Lanka, medicine paper bags, pharmacy envelopes, custom printed paper packaging, pharmaceutical packaging manufacturer Sri Lanka, paper packaging supplier Sri Lanka, hospital packaging supplies, pharmacy packaging solutions">
+  <link rel="canonical" href="https://epicpaper.lk/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Epic Paper">
+  <meta property="og:title" content="Epic Paper | Pharmaceutical Paper Packaging in Sri Lanka">
+  <meta property="og:description" content="Sri Lankan manufacturer of medicine envelopes, pharmacy bags, drug covers and custom-printed pharmaceutical paper packaging.">
+  <meta property="og:url" content="https://epicpaper.lk/">
+  <meta property="og:image" content="https://epicpaper.lk/src/images/logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Epic Paper | Pharmaceutical Paper Packaging in Sri Lanka">
+  <meta name="twitter:description" content="Medicine envelopes, pharmacy bags, drug covers and custom pharmaceutical paper packaging made in Sri Lanka.">
+  <meta name="twitter:image" content="https://epicpaper.lk/src/images/logo.png">
+  <script type="application/ld+json">
+    <?= json_encode([
+      '@context' => 'https://schema.org',
+      '@type' => 'LocalBusiness',
+      'name' => 'Epic Paper (Pvt) Ltd',
+      'url' => 'https://epicpaper.lk/',
+      'logo' => 'https://epicpaper.lk/src/images/logo.png',
+      'description' => 'Sri Lankan manufacturer of pharmaceutical paper packaging, medicine envelopes, pharmacy bags, drug covers and custom-printed paper packaging solutions.',
+      'telephone' => $settings['phone_1'],
+      'email' => $settings['email'],
+      'address' => [
+        '@type' => 'PostalAddress',
+        'streetAddress' => $settings['address'],
+        'addressCountry' => 'LK'
+      ]
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>
+  </script>
   <link rel="icon" href="src/images/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="src/images/favicon.svg">
 
@@ -45,7 +74,7 @@ $loggedIn = is_logged_in();
     <?php endif; ?>
     <nav class="nav">
       <a href="index.php" class="logo">
-        <img src="src/images/logo.png" alt="" width="60" height="60">
+        <img src="src/images/logo.png" alt="Epic Paper logo" width="60" height="60">
         <span class="logo-text">
           <!-- <strong>EPIC PAPER</strong> -->
           <!-- <span>PACKAGING SOLUTIONS</span> -->
@@ -382,7 +411,7 @@ $loggedIn = is_logged_in();
     <div class="container footer-grid">
       <div>
         <div class="footer-logo">
-          <img src="src/images/logo.png" alt="" width="60" height="60">
+          <img src="src/images/logo.png" alt="Epic Paper logo" width="60" height="60">
           <span class="logo-text"><strong>EPIC PAPER</strong><span>PACKAGING SOLUTIONS</span></span>
         </div>
         <p>Sri Lanka's trusted partner for pharmaceutical paper packaging solutions.</p>
