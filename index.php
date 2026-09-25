@@ -15,19 +15,19 @@ $seoProducts = get_db()->query('SELECT id, name, description, image_path FROM pr
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Medicine Envelopes &amp; Pharmaceutical Packaging in Sri Lanka | Epic Paper</title>
-  <meta name="description" content="Epic Paper (Pvt) Ltd manufactures medicine envelopes, pharmacy bags, drug covers and custom pharmaceutical paper packaging in Sri Lanka for pharmacies, hospitals and distributors.">
-  <meta name="keywords" content="medicine envelopes Sri Lanka, pharmaceutical paper packaging Sri Lanka, pharmacy bags Sri Lanka, drug covers Sri Lanka, medicine paper bags, pharmacy envelopes, custom printed paper packaging, pharmaceutical packaging manufacturer Sri Lanka, paper packaging supplier Sri Lanka, hospital packaging supplies, pharmacy packaging solutions">
+  <title>Medicine Covers &amp; Pharmacy Paper Covers in Sri Lanka | Epic Paper</title>
+  <meta name="description" content="Epic Paper (Pvt) Ltd manufactures medicine covers, pharmacy covers, paper covers and custom pharmacy medicine covers in Sri Lanka for pharmacies, hospitals and distributors.">
+  <meta name="keywords" content="medicine cover Sri Lanka, pharmacy covers Sri Lanka, paper covers Sri Lanka, pharmacy medicine covers, medicine envelopes Sri Lanka, pharmaceutical paper packaging Sri Lanka, pharmacy bags Sri Lanka, drug covers Sri Lanka, medicine paper bags, pharmacy envelopes, custom printed paper packaging, pharmaceutical packaging manufacturer Sri Lanka, paper packaging supplier Sri Lanka, hospital packaging supplies, pharmacy packaging solutions">
   <link rel="canonical" href="https://epicpaper.lk/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Epic Paper">
-  <meta property="og:title" content="Epic Paper | Pharmaceutical Paper Packaging in Sri Lanka">
-  <meta property="og:description" content="Sri Lankan manufacturer of medicine envelopes, pharmacy bags, drug covers and custom-printed pharmaceutical paper packaging.">
+  <meta property="og:title" content="Epic Paper | Medicine Covers &amp; Pharmacy Paper Covers in Sri Lanka">
+  <meta property="og:description" content="Sri Lankan manufacturer of medicine covers, pharmacy covers, paper covers and custom-printed pharmacy medicine covers.">
   <meta property="og:url" content="https://epicpaper.lk/">
   <meta property="og:image" content="https://epicpaper.lk/src/images/logo.png">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Epic Paper | Pharmaceutical Paper Packaging in Sri Lanka">
-  <meta name="twitter:description" content="Medicine envelopes, pharmacy bags, drug covers and custom pharmaceutical paper packaging made in Sri Lanka.">
+  <meta name="twitter:title" content="Epic Paper | Medicine Covers &amp; Pharmacy Paper Covers in Sri Lanka">
+  <meta name="twitter:description" content="Medicine covers, pharmacy covers, paper covers and custom pharmacy medicine covers made in Sri Lanka.">
   <meta name="twitter:image" content="https://epicpaper.lk/src/images/logo.png">
   <script type="application/ld+json">
     <?= json_encode([
@@ -36,7 +36,7 @@ $seoProducts = get_db()->query('SELECT id, name, description, image_path FROM pr
       'name' => 'Epic Paper (Pvt) Ltd',
       'url' => 'https://epicpaper.lk/',
       'logo' => 'https://epicpaper.lk/src/images/logo.png',
-      'description' => 'Sri Lankan manufacturer of pharmaceutical paper packaging, medicine envelopes, pharmacy bags, drug covers and custom-printed paper packaging solutions.',
+      'description' => 'Sri Lankan manufacturer of medicine covers, pharmacy covers, paper covers, medicine envelopes and custom-printed pharmacy medicine covers.',
       'telephone' => $settings['phone_1'],
       'email' => $settings['email'],
       'address' => [
@@ -111,8 +111,8 @@ $seoProducts = get_db()->query('SELECT id, name, description, image_path FROM pr
     <div class="container hero-grid">
       <div class="hero-copy">
         <span class="badge">20+ YEARS OF EXCELLENCE</span>
-        <h1>Medicine Envelopes &amp; <span class="accent">Pharmaceutical</span> Packaging in Sri Lanka</h1>
-        <p class="hero-desc">Trusted by pharmacies and healthcare businesses across<br> Sri Lanka for over two decades.</p>
+        <h1>Medicine Covers &amp; <span class="accent">Pharmacy</span> Paper Covers in Sri Lanka</h1>
+        <p class="hero-desc">Trusted supplier of pharmacy medicine covers and paper covers for<br> pharmacies and healthcare businesses across Sri Lanka for over two decades.</p>
 
         <div class="hero-features">
           <div class="hero-feature">
@@ -159,7 +159,7 @@ $seoProducts = get_db()->query('SELECT id, name, description, image_path FROM pr
 
       <div class="section-head">
 
-        <p>Established in 2005, Epic Paper (Pvt) Ltd is a trusted Sri Lankan manufacturer of high-quality pharmaceutical paper packaging. We specialize in medicine envelopes, pharmacy envelopes, pharmacy bags, drug covers and custom-printed paper packaging solutions.</p>
+        <p>Established in 2005, Epic Paper (Pvt) Ltd is a trusted Sri Lankan manufacturer of high-quality medicine covers, pharmacy covers and paper covers. We specialize in pharmacy medicine covers, medicine envelopes, pharmacy bags, drug covers and custom-printed paper packaging solutions.</p>
         <p>With over 20 years of manufacturing experience, we combine our own machinery, locally developed technology, high-quality branded paper materials and strict QA &amp; QC practices to deliver consistent products our customers can trust.</p>
         <p>Proudly Made in Sri Lanka, we serve government and private hospitals, pharmacies, doctors, wholesalers and medicine distributors across the country.</p>
       </div>
@@ -259,7 +259,7 @@ $seoProducts = get_db()->query('SELECT id, name, description, image_path FROM pr
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">Our Products</span>
-        <h2>Pharmaceutical Paper Packaging Solutions</h2>
+        <h2>Medicine Covers &amp; Pharmacy Paper Covers</h2>
       </div>
 
       <div class="product-grid" id="productGrid">
