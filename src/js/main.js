@@ -378,7 +378,7 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && orderModal.classList.contains("open")) closeOrderModal();
 });
 
-/* ---------- Submit order -> save DB -> WhatsApp ---------- */
+/* ---------- Submit order -> WhatsApp (always) + save to DB ---------- */
 orderForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   if (!currentProduct) return;
@@ -401,35 +401,22 @@ orderForm.addEventListener("submit", async (e) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
     });
-
-    const contentType = res.headers.get("content-type") || "";
-    if (!contentType.includes("application/json")) {
-      const text = await res.text();
-      throw new Error((text || "Order save failed").replace(/\s+/g, " ").slice(0, 180));
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      console.warn("Order was not saved to the database:", data.error || res.status);
     }
-
-    const data = await res.json();
-    if (!res.ok) throw new Error(data.error || "Order save failed");
-
-    const name = payload.customer_name;
-    const phone = payload.phone;
-    const size = payload.size;
-    const color = payload.color || null;
-    const qty = payload.quantity;
-    const location = payload.location;
-    const note = payload.notes;
-
-    const lines = ["*New Order Epic Paper*", `Product: ${currentProduct.name}`, `Size: ${size}`];
-    if (color) lines.push(`Colour: ${color}`);
-    lines.push(`Quantity: ${qty}`, `Name: ${name}`, `Phone: ${phone}`, `Location: ${location}`);
-    if (note) lines.push(`Notes: ${note}`);
-
-    const message = encodeURIComponent(lines.join("\n"));
-    const waUrl = `https://wa.me/${SITE_CONFIG.WHATSAPP_NUMBER}?text=${message}`;
-
-    window.open(waUrl, "_blank");
-    closeOrderModal();
   } catch (err) {
-    alert(err.message || "Could not save order.");
+    console.warn("Order was not saved to the database:", err.message);
   }
+
+  const lines = ["*New Order Epic Paper*", `Product: ${currentProduct.name}`, `Size: ${payload.size}`];
+  if (payload.color) lines.push(`Colour: ${payload.color}`);
+  lines.push(`Quantity: ${payload.quantity}`, `Name: ${payload.customer_name}`, `Phone: ${payload.phone}`, `Location: ${payload.location}`);
+  if (payload.notes) lines.push(`Notes: ${payload.notes}`);
+
+  const message = encodeURIComponent(lines.join("\n"));
+  const waUrl = `https://wa.me/${SITE_CONFIG.WHATSAPP_NUMBER}?text=${message}`;
+
+  window.open(waUrl, "_blank");
+  closeOrderModal();
 });
