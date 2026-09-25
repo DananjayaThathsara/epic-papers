@@ -112,7 +112,7 @@ $seoProducts = get_db()->query('SELECT id, name, description, image_path FROM pr
       <div class="hero-copy">
         <span class="badge">20+ YEARS OF EXCELLENCE</span>
         <h1>Medicine Covers &amp; <span class="accent">Pharmacy</span> Paper Covers in Sri Lanka</h1>
-        <p class="hero-desc">Trusted supplier of pharmacy medicine covers and paper covers for<br> pharmacies and healthcare businesses across Sri Lanka for over two decades.</p>
+        <p class="hero-desc">Trusted supplier of pharmacy medicine covers and paper covers for pharmacies and healthcare businesses across Sri Lanka for over two decades.</p>
 
         <div class="hero-features">
           <div class="hero-feature">
